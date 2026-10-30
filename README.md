@@ -47,4 +47,37 @@ git log
 ```bash
 nano texto.txt #Borrar linea "tres" y agregar linea "seis"
 get diff
+git commit -a -m "Probando diff"
+nano texto.txt #Agregar linea "siete"
+git diff
+```
+
+# Ignorar archivos:
+
+```bash
+nano .gitignore #Crear archivo para gestionar archivos a ignorar
+```
+Dentro del archivo agregar:
+```text
+# ignora los archivos terminados en .class
+*.class 
+# ignora los archivos terminados en ~
+*~ 
+# pero no importante~, aun cuando habia ignorado los archivos terminados en ~ en la linea anterior 
+!importante~
+```
+Crear otros 2 archivos, uno llamado Hola.java con el siguiente contenido:
+```java
+class Hola {
+ public static void main(String[] args){
+ System.out.println("Welcome to the Java World");
+ }
+}
+```
+Y otro llamado temporal~ y importante~
+
+Guardar en el repositorio:
+```bash
+git add .
+git commit -m "Añadidos fuentes en java y archivos importantes"
 ```
