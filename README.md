@@ -20,7 +20,31 @@ git branch -m main
 git branch -m master
 ```
 
-# Añadir archivos
+# Añadir archivos y confirmamos
 ```bash
+git add texto.txt
+git add script.sh
+git add README.md
 
+git commit -m "Confirmación inicial"
+```
+# Modificar texto.txt
+
+```bash
+nano texto.txt #Y agregar nueva línea "cuatro" y "cinco"
+git add texto.txt
+git commit -m "Ampliada la explicación del texto"
+```
+
+# Ver el último cambio y los cambios históricos:
+```bash
+git show
+git log
+```
+
+# Modificar texto.txt y ver diferencias de archivos:
+
+```bash
+nano texto.txt #Borrar linea "tres" y agregar linea "seis"
+get diff
 ```
