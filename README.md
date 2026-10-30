@@ -20,7 +20,7 @@ git branch -m main
 git branch -m master
 ```
 
-# Añadir archivos y confirmamos
+## Añadir archivos y confirmamos
 ```bash
 git add texto.txt
 git add script.sh
@@ -28,7 +28,7 @@ git add README.md
 
 git commit -m "Confirmación inicial"
 ```
-# Modificar texto.txt
+## Modificar texto.txt
 
 ```bash
 nano texto.txt #Y agregar nueva línea "cuatro" y "cinco"
@@ -36,13 +36,13 @@ git add texto.txt
 git commit -m "Ampliada la explicación del texto"
 ```
 
-# Ver el último cambio y los cambios históricos:
+## Ver el último cambio y los cambios históricos:
 ```bash
 git show
 git log
 ```
 
-# Modificar texto.txt y ver diferencias de archivos:
+## Modificar texto.txt y ver diferencias de archivos:
 
 ```bash
 nano texto.txt #Borrar linea "tres" y agregar linea "seis"
@@ -52,7 +52,7 @@ nano texto.txt #Agregar linea "siete"
 git diff
 ```
 
-# Ignorar archivos:
+## Ignorar archivos:
 
 ```bash
 nano .gitignore #Crear archivo para gestionar archivos a ignorar
@@ -80,4 +80,34 @@ Guardar en el repositorio:
 ```bash
 git add .
 git commit -m "Añadidos fuentes en java y archivos importantes"
+```
+
+## Tags y gestión de versiones
+```bash
+git tag v0.7 #Agregar tag
+```
+Para agregar un tag a una version anterior:
+```bash
+git log #Para ver el código hash de la verson que queramos.
+git tag v0.3 6ed28c1b9e2fd17d5f41d527052a68028cc93719
+
+git log --onleline
+```
+
+## Ramas
+Crear una rama llamada Prueba:
+```bash
+git branch Prueba
+```
+Para ver las ramas creadas
+```bash
+git branch
+```
+Para cambiar de rama
+```bash
+git switch Prueba
+```
+Modifico el archivo Hola.java y le agrego esta línea:
+```java
+
 ```
